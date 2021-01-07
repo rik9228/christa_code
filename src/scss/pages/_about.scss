@@ -1,0 +1,221 @@
+.mainVisual {
+  &--about {
+    height: 464px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background-color: $color-mainVisual;
+      width: 52.9%;
+      height: 464px;
+    }
+  }
+
+  &__wrapper {
+    // aboutページ用
+    &--about {
+      background: url(#{$imgDir}/heading-img@2x.jpg) no-repeat;
+      background-size: cover;
+      background-position-x: 48%;
+      height: 387px;
+
+      .mainVisual__box {
+        top: 50%;
+        right: 0;
+      }
+    }
+  }
+
+  @include tab {
+    &--about {
+      height: 60.1vh;
+      &::after {
+        content: "";
+        height: 60.1vh;
+      }
+    }
+
+    &__wrapper {
+      // aboutページ用
+      &--about {
+        height: 51.7vh;
+      }
+    }
+  }
+
+  @include sp {
+    &--about {
+      height: 67.3vh;
+      &::after {
+        content: "";
+        height: 67.3vh;
+      }
+
+      .mainVisual__box {
+        top: 43%;
+        right: 85px;
+      }
+    }
+
+    &__wrapper {
+      background-position: 53%;
+      &--about {
+        height: 58vh;
+      }
+    }
+  }
+}
+
+.vision {
+  margin-top: 120px;
+  &__wrapper {
+    margin-left: 226px;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__copy {
+    margin-top: 32px;
+    @include FONT--NSJP;
+    font-weight: 800;
+  }
+
+  &__description {
+    margin-top: 32px;
+    font-family: "Noto Sans JP";
+    font-weight: 800;
+    line-height: 2;
+    text-align: justify;
+  }
+
+  @include tab {
+    & {
+      margin-top: 80px;
+    }
+    &__wrapper {
+      margin-left: 120px;
+    }
+  }
+
+  @include sp {
+    &__wrapper {
+      margin-left: 0;
+    }
+  }
+}
+
+.message {
+  margin-top: 120px;
+  &::before {
+    content: "";
+    background: url(#{$imgDir}/ceo-img@2x.jpg) no-repeat;
+    background-size: cover;
+    width: 38.2%;
+    height: 19.6vw;
+    max-height: 282px;
+    display: block;
+    position: relative;
+    background-position: center;
+    z-index: 5;
+  }
+
+  &__wrapper {
+    padding: 120px 185px 90px;
+    background: $color-gray;
+    width: 70%;
+    margin-left: auto;
+    margin-top: -138px;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__description {
+    margin-top: 32px;
+    font-family: "Noto Sans JP";
+    font-weight: 800;
+    line-height: 2;
+    text-align: justify;
+  }
+
+  @include tab {
+    margin-top: 80px;
+    &::before {
+      content: "";
+      width: 41.7vw;
+      max-width: 320px;
+      height: 28.1vw;
+      max-height: 216px;
+    }
+
+    &__wrapper {
+      padding: 109px 40px 93px;
+      margin-top: -85px;
+    }
+  }
+
+  @include sp {
+    &::before {
+      content: "";
+      width: 91vw;
+      height: 61.3vw;
+      transform: translateX(-15px);
+    }
+
+    &__wrapper {
+      width: 100%;
+      padding: 126px 28px 80px;
+      margin-top: -101px;
+    }
+  }
+}
+
+.company {
+  margin-top: 120px;
+  .TITLE {
+    border-bottom: 1px solid $color-border;
+    padding: 0 0 32px 0;
+  }
+
+  &__list {
+    padding: 18px 0;
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__term {
+    max-width: 80px;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  &__description {
+    margin-left: 64px;
+  }
+
+  &__image {
+    margin-top: 40px;
+  }
+
+  @include tab {
+    margin-top: 80px;
+  }
+
+  @include sp {
+    &__image {
+      width: 92vw;
+      max-width: 559px;
+      max-height: 470px;
+      height: 125vw;
+      object-fit: cover;
+    }
+  }
+}

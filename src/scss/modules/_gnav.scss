@@ -1,0 +1,128 @@
+.nav {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 15;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 1rem;
+    color: #fff;
+    font-family: "Montserrat";
+    &.active {
+      color: $color-active;
+    }
+  }
+
+  &__button {
+    position: relative;
+    margin-right: 8px;
+
+    // activeついたとき
+    &.active {
+      background-color: $color-active;
+      &::before,
+      &::after {
+        background-color: $color-active;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      transition: 0.2s;
+    }
+
+    &,
+    &::before,
+    &::after {
+      width: 22px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+
+    &::before {
+      top: -4px;
+    }
+    &::after {
+      top: 4px;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36.1%;
+  height: 100vh;
+  transform: translate(100%);
+  transition: 0.5s;
+  background-color: rgba(34, 34, 34, 0.95);
+  z-index: 10;
+  &__wrapper {
+    margin: 180px auto 0;
+    text-align: center;
+  }
+
+  &__listFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__listItem {
+    & > a {
+      font-family: "Montserrat";
+      font-weight: 800;
+      display: block;
+      color: $color-white;
+    }
+    &:not(:first-of-type) > a {
+      margin-top: 30px;
+    }
+  }
+
+  @include tab {
+    width: 65.1%;
+  }
+
+  @include sp {
+    width: 100%;
+  }
+}
+
+#nav__trigger {
+  display: none;
+}
+
+#nav__trigger:checked ~ .nav__wrapper > .nav__button {
+  background-color: transparent;
+}
+
+#nav__trigger:checked ~ .nav__wrapper > .nav__button::before {
+  content: "";
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#nav__trigger:checked ~ .nav__wrapper > .nav__button::after {
+  content: "";
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+#nav__trigger:checked ~ .menu {
+  transform: translate(0);
+}

@@ -1,0 +1,29 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1;
+  color: #000000;
+  font-family: "游ゴシック", "Montserrat", "NotoSansJP", "YuMincho", "YuGothic" sans-serif;
+  position: relative;
+  z-index: -5;
+}
+
+img,
+video,
+object {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  border: none;
+}

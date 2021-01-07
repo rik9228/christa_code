@@ -1,0 +1,17 @@
+@mixin title {
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: $color-title;
+}
+
+@mixin FONT--NSJP {
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  color: $color-title;
+}
+
+// @mixin FONT--MT{
+//   font-family:'Noto Sans JP';
+//   font-weight: 400;
+//   color:$color-title;
+// }

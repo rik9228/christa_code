@@ -1,0 +1,135 @@
+<%- include ('common/_head'); %> <%- include ('common/_header'); %>
+
+<main>
+  <!-- start mainVisual -->
+  <section class="mainVisual mainVisual--contact">
+    <div class="mainVisual__wrapper mainVisual__wrapper--contact">
+      <div class="mainVisual__box mainVisual__box--deco">
+        <p class="ENCOPY FONTSIZE--XL">CONTACT</p>
+        <h2 class="MAINCOPY FONTSIZE--L">お問い合わせ</h2>
+      </div>
+    </div>
+
+    <div class="mainVisual__scroll PC--NONE"></div>
+  </section>
+
+  <div class="INNER">
+    <section class="form">
+      <div class="form__wrapper">
+        <form action="" method="post">
+          <p class="form__description FONTSIZE--M">
+            ご依頼やご相談についてのご質問やご要望がございましたら、下記フォームよりお気軽にお問い合わせください。送付いただいた内容を確認の上、担当者からご連絡させていただきます。
+          </p>
+
+          <div class="form __box">
+            <p class="form__title form__title--first form__title--deco FONTSIZE--M-ALL">お問い合わせ種別</p>
+            <div class="form__partition">
+              <dl class="form__list">
+                <dt><input type="radio" class="form__inputCheck" id="work" name="category" value="" /></dt>
+                <dd>
+                  <label for="work" class="form__label FONTSIZE--M-ALL">制作依頼</label>
+                </dd>
+              </dl>
+
+              <dl class="form__list">
+                <dt>
+                  <input type="radio" class="form__inputCheck" id="recruit" name="category" value="" />
+                </dt>
+                <dd>
+                  <label for="recruit" class="form__label FONTSIZE--M-ALL">採用</label>
+                </dd>
+              </dl>
+
+              <dl class="form__list">
+                <dt>
+                  <input type="radio" class="form__inputCheck" id="IR" name="category" value="" />
+                </dt>
+                <dd>
+                  <label for="IR" class="form__label FONTSIZE--M-ALL">IR</label>
+                </dd>
+              </dl>
+
+              <dl class="form__list">
+                <dt>
+                  <input type="radio" class="form__inputCheck" id="other" name="category" value="" />
+                </dt>
+                <dd>
+                  <label for="other" class="form__label FONTSIZE--M-ALL">その他</label>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="form__box">
+            <p class="form__title FONTSIZE--M-ALL">会社名・団体名</p>
+            <input type="text" class="form__inputCompany FONTSIZE--M-ALL" />
+          </div>
+          <div class="form__box">
+            <p class="form__title form__title--deco FONTSIZE--M-ALL">お名前</p>
+            <input type="text" class="form__inputFullName FONTSIZE--M-ALL" />
+          </div>
+          <div class="form__box">
+            <p class="form__title form__title--deco FONTSIZE--M-ALL">メールアドレス</p>
+            <input type="text" class="form__inputMail FONTSIZE--M-ALL" />
+          </div>
+          <div class="form__box">
+            <p class="form__title FONTSIZE--M-ALL">電話番号</p>
+            <input type="text" class="form__inputTel FONTSIZE--M-ALL" />
+          </div>
+          <div class="form__box">
+            <p class="form__title form__title--deco FONTSIZE--M-ALL">お問い合わせ内容</p>
+            <textarea name="" id="" class="form__inputArea FONTSIZE--M-ALL"></textarea>
+          </div>
+
+          <div class="form__box">
+            <p class="form__title form__title--privacy FONTSIZE--M-ALL">PRIVACY POLICY</p>
+            <p class="form__description form__description--deco FONTSIZE--M">
+              個人情報保護方針<br />
+              株式会社DIGSMILE（以下、当社）では、個人情報の重要性を認識し、以下の基準に従って、適切な管理、保護に努めます。
+              <br />
+              <br />
+              1.個人情報の収集、利用<br />
+              当社では、お客様との取引、サービスの提供のために個人情報を適法に収集し、収集した目的の範囲内で、個人情報を利用いたします。
+              <br />
+              <br />
+              2.個人情報の第三者への開示と提供<br />
+              収集したお客様の個人情報は、法的な要請等によらない限り、お客様の承諾を得ない第三者に対して提供・開示はいたしません。
+              業務の都合上、業務委託先に個人情報を提供する場合は、機密保持契約等によって業務委託先に個人情報保護を義務付けるとともに、業務委託先が適切に個人情報を取り扱うように管理いたします。
+              <br />
+              <br />
+              3.個人情報の保護<br />
+              当社では、個人情報の紛失、破壊、改ざん、不正アクセス、および漏えい等を防止するため、適切な対策を行います。
+              <br />
+              <br />
+              4.法令および関連規範の遵守<br />
+              当社は、個人情報の取り扱いに関して、個人情報保護法をはじめとする個人情報に関する法令および関連する規範を遵守します。
+              <br />
+              <br />
+              5.個人情報の開示・訂正・削除<br />
+              当社では、個人情報の開示・訂正・削除等の依頼があった場合、情報提供者本人であることを確認の上、すみやかに対応いたします。
+              <br />
+              <br />
+              法令や当社方針により、プライバシー・ポリシーを予告なく改訂することがあります。
+              <br />
+              <br />お問い合わせ窓口 当社の個人情報の取扱いに関するお問い合わせは下記までご連絡お願いいたします。
+              <br />
+              株式会社ファイアープレイス
+              <br />
+              044-589-4333
+            </p>
+          </div>
+
+          <div class="form__box form__box--deco">
+            <input type="checkbox" class="form__inputCheck form__inputCheck--deco" id="approve" />
+            <label for="approve" class="form__approve FONTSIZE--M"
+              >個人情報の取り扱いについて同意のうえ送信します。</label
+            >
+          </div>
+
+          <a href="" class="BUTTON">送信</a>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<%- include ('common/_footer'); %> <%- include ('common/_script'); %>

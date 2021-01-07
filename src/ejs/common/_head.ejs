@@ -1,0 +1,45 @@
+<% title = 'タイトル'; %>
+<% description = 'ディスクリプション'; %>
+<% FontAwesome = 'https://use.fontawesome.com/releases/v5.6.1/css/all.css'; %>
+<% pathCss = 'dist/css/style.css'; %>
+<% pathJs = '/js/script.js'; %>
+<% filename %>
+
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+	<html lang="ja" class="no-js lt-ie9" prefix="og: http://ogp.me/ns#">
+	<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ja" class="no-js" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <title><% if(filename.match(/about/)){%>About
+      <%}else if(filename.match(/contact/)){%>Contact
+      <%}else{%>トップページ
+      <%}%></title>
+    <meta name="description" content="<%= description %>" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=10,initial-scale=1.0" />
+    <link rel="shortcut icon" href="common/img/favicon.png">
+     <!--  ogp-->
+    <meta property="og:title" content="ページタイトル｜会社名など" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xxxxxxxxxxxxxxxxxxxx/?" />
+    <meta property="og:image" content="https://xxxxxxx/xxxxxx/xxxxxxx.png" />
+    <meta property="og:site_name" content=“ページタイトル｜会社名な” />
+    <meta property="og:description" content="xxxxxxxxxxxxxxxxxxxx" />
+    <!-- tw -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@[@xxxxxxx]" />
+    <!-- fb -->
+    <meta property="fb:app_id" content="App-ID" />
+    <meta property="base_url" content="./" id="base_url" />
+    <!--    CDN FontAwesome-->
+    <link href="<%= FontAwesome %>" rel="stylesheet" />
+    <link rel="stylesheet" href="<%= pathCss %>" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>

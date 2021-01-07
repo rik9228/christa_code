@@ -1,0 +1,167 @@
+.TITLE {
+  @include title;
+}
+
+.BUTTON {
+  width: 160px;
+  max-width: 100%;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #000;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Montserrat";
+}
+
+.WRAPPER {
+  max-width: 1100px;
+  width: calc(100% - 170px * 2);
+  margin: 0 auto;
+  position: relative;
+  z-index: -5;
+
+  @include tab {
+    width: calc(100% - 30px * 2);
+  }
+
+  @include sp {
+    width: calc(100% - 15px * 2);
+  }
+}
+
+.INNER {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: -5;
+
+  @include tab {
+    width: calc(100% - 50px * 2);
+  }
+
+  @include sp {
+    width: calc(100% - 15px * 2);
+  }
+}
+
+.PC--NONE {
+  display: none !important;
+
+  @include tab {
+    display: none !important;
+  }
+
+  @include sp {
+    display: block !important;
+  }
+}
+
+.SP--NONE {
+  display: block !important;
+
+  @include sp {
+    display: none !important;
+  }
+}
+
+.MT--NONE {
+  margin-top: 0 !important;
+}
+
+.FONTSIZE--XL {
+  font-size: 72px !important;
+  @include tab {
+    font-size: 56px !important;
+  }
+}
+
+.FONTSIZE--XL2 {
+  font-size: 72px !important;
+  @include tab {
+    font-size: 52px !important;
+  }
+}
+
+.FONTSIZE--LL {
+  font-size: 32px !important;
+}
+
+.FONTSIZE--LL2 {
+  font-size: 32px !important;
+  @include tab {
+    font-size: 28px !important;
+  }
+}
+
+.FONTSIZE--L2 {
+  font-size: 24px !important;
+}
+
+.FONTSIZE--L {
+  font-size: 20px !important;
+  @include tab {
+    font-size: 16px !important;
+  }
+}
+
+.FONTSIZE--M {
+  font-size: 16px !important;
+  @include sp {
+    font-size: 14px !important;
+  }
+}
+
+.FONTSIZE--M-ALL {
+  font-size: 16px !important;
+}
+
+.FONTSIZE--S {
+  font-size: 14px !important;
+  @include sp {
+    font-size: 12px !important;
+  }
+}
+
+.FONTSIZE--SS {
+  font-size: 10px !important;
+}
+
+.FONTSIZE--MENUITEM {
+  font-size: 20px !important;
+  @include sp {
+    font-size: 16px;
+  }
+}
+
+.MAINCOPY {
+  font-family: "YuGothic";
+  margin-top: 16px;
+
+  &--deco {
+    font-family: "Montserrat";
+    font-weight: 600;
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+.ENCOPY {
+  font-family: "Montserrat";
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.063em;
+
+  @include tab {
+    font-size: 12px;
+  }
+
+  @include sp {
+    letter-spacing: 0;
+  }
+}
+
+

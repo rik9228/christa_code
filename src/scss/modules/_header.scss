@@ -1,0 +1,37 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 58px;
+  }
+
+  &__homeLogo {
+    position: relative;
+    z-index: 15;
+
+    &--round,
+    &--text {
+      transition: 0.2s;
+      &.active {
+        fill: #000000;
+      }
+    }
+  }
+
+  @include tab {
+    &__wrapper {
+      padding: 34px 15px;
+    }
+  }
+
+  @include sp {
+    &__wrapper {
+      padding: 20px 15px;
+    }
+  }
+}

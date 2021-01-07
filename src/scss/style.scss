@@ -1,0 +1,26 @@
+// 分割ファイルの記載
+// 別途ファイル名は_functions.scssのように文頭に"_"を記載。
+// preprosの仕様を忘れない。
+
+// base,reset
+@import "./base/reset";
+@import "./base/base";
+
+// setting
+@import "./setting/config";
+@import "./setting/functions";
+
+// mixin
+@import "./mixin/font";
+
+// modules
+@import "./modules/common";
+@import "./modules/header";
+@import "./modules/gnav";
+@import "./modules/fnav";
+@import "./modules/footer";
+
+// pages
+@import "./pages/index";
+@import "./pages/about";
+@import "./pages/contact";

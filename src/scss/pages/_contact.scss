@@ -1,0 +1,253 @@
+.mainVisual {
+  position: relative;
+  &--contact {
+    height: 451px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background-color: $color-mainVisual;
+      width: 54.1%;
+      height: 451px;
+    }
+  }
+  &__wrapper {
+    // CONTACTページ用
+    &--contact {
+      background: url(#{$imgDir}/heading-img_contact@2x.jpg) no-repeat;
+      background-size: cover;
+      height: 37.8vh;
+      background-position: 46%;
+    }
+  }
+
+  &--deco {
+    position: relative;
+  }
+
+  &__scroll {
+    display: none;
+  }
+
+  @include tab {
+    &--contact {
+      height: 60.1vh;
+      &::after {
+        width: 52.9%;
+        height: 60.1vh;
+      }
+    }
+
+    &__wrapper {
+      // CONTACTページ用
+      &--contact {
+        height: 51.2vh;
+        background-position: 46%;
+      }
+    }
+  }
+
+  @include sp {
+    &--contact {
+      height: 54.7vh;
+      &::after {
+        width: 52.9%;
+        height: 54.7vh;
+      }
+      .MAINCOPY {
+        text-align: right;
+      }
+    }
+
+    &__wrapper {
+      // CONTACTページ用
+      &--contact {
+        height: 72vw;
+        background-position: 80%;
+
+        .mainVisual__box {
+          transform: initial;
+          bottom: 30px;
+          right: -75px;
+          top: initial;
+
+          .ENCOPY {
+            letter-spacing: 0.063em;
+          }
+        }
+      }
+    }
+
+    &__scroll {
+      @include sp {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        width: 178px;
+        height: 15px;
+        display: flex !important;
+        align-items: center;
+        transform-origin: right bottom;
+        transform: rotate(90deg);
+        justify-content: space-between;
+        right: 97%;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 118px;
+          height: 1px;
+          background-color: #000;
+        }
+
+        &::after {
+          content: "SCROLL";
+          display: block;
+          transform: rotate(180deg);
+          @include title;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// form
+
+.form {
+  padding: 0 1px;
+
+  &__wrapper {
+    margin-top: 120px;
+  }
+
+  &__box {
+    margin-top: 40px;
+    &--deco {
+      text-align: center;
+    }
+  }
+  &__description {
+    @include FONT--NSJP;
+    line-height: 1.5;
+
+    &--deco {
+      border: 1px solid #000000;
+      height: 252px;
+      overflow-y: scroll;
+      padding: 10px;
+      margin-top: 8px;
+    }
+  }
+
+  &__partition {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+  }
+
+  &__inputCheck {
+    vertical-align: bottom;
+    &--deco {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 1px;
+      margin: 0;
+    }
+  }
+
+  &__label {
+    margin-left: 10px;
+  }
+
+  input[type="text"] {
+    height: 40px;
+  }
+
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 2px;
+  }
+  input[type="text"],
+  textarea {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  textarea {
+    height: 212px;
+  }
+
+  &__title {
+    &--first {
+      margin-top: 56px;
+    }
+    @include FONT--NSJP;
+    &--deco {
+      &::after {
+        content: "必須";
+        padding: 5px 4px;
+        background-color: $color-mainVisual;
+        color: $color-white;
+        display: inline-block;
+        font-size: 12px;
+        vertical-align: text-top;
+        margin-left: 12px;
+      }
+    }
+    &--privacy {
+      @include title;
+    }
+  }
+
+  &__approve {
+    letter-spacing: -0.04em;
+  }
+
+  .BUTTON {
+    margin: 40px auto 0px;
+  }
+
+  @include tab {
+    &__wrapper {
+      margin-top: 135px;
+    }
+  }
+
+  @include sp {
+    .BUTTON {
+      margin-top: 62px;
+    }
+
+    &__wrapper {
+      margin-top: 80px;
+    }
+
+    &__box {
+      &--deco {
+        text-align: initial;
+      }
+    }
+
+    &__partition {
+      flex-direction: column;
+    }
+
+    &__inputCheck {
+      &--deco {
+        width: 16px;
+        height: 16px;
+        top: -1px;
+      }
+    }
+  }
+}
